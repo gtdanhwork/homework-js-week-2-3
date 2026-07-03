@@ -28,16 +28,17 @@
                         <a href="#converter_calculator" class="nav-link bg-primary text-light">Bài 3</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a href="#" class="nav-link bg-primary text-light">Bài 4</a>
+                        <a href="#geometric_calculator" class="nav-link bg-primary text-light">Bài 4</a>
                     </li>
                     <li class="nav-item px-4">
-                        <a href="#" class="nav-link bg-primary text-light">Bài 5</a>
+                        <a href="#digitsum_calculator" class="nav-link bg-primary text-light">Bài 5</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
+        <!-- Bài 1 -->
         <section class="vh-100 py-5" id="salary_calculator">
             <div class="container row align-items-center mx-auto h-100">
                 <div class="content">
@@ -81,7 +82,7 @@
                                 <label for="inputSalary" class="col-4 col-form-label">Lương 1 ngày</label>
                                 <div class="col-8">
                                     <input type="number" class="form-control" name="inputSalary" id="inputSalary"
-                                        placeholder="Nhập số ngày" value="100000" disabled />
+                                        value="100000" disabled />
                                 </div>
                             </div>
                             <div class="mb-3 row">
@@ -106,6 +107,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Bài 2 -->
         <section class="vh-100 py-5" id="average_calculator">
             <div class="container row align-items-center mx-auto h-100">
                 <div class="content">
@@ -186,6 +189,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Bài 3 -->
         <section class="vh-100 py-5" id="converter_calculator">
             <div class="container row align-items-center mx-auto h-100">
                 <div class="content">
@@ -198,21 +203,21 @@
                         <div class="col-3 bg-success p-5 text-light rounded-4">
                             <h3>Input</h3>
                             <ul>
-                                <li>Gía trị USD hiện tại là 23.500 (Mặc định / valuePerUSD / Number)</li>
-                                <li>Nhập số USD (Người dùng nhập / curUSD / Number)</li>
+                                <li>Gía trị USD hiện tại là 23.500 (valuePerUSD / Mặc định)</li>
+                                <li>Nhập số USD (inputUSD / Number)</li>
                             </ul>
                         </div>
                         <div class="col-3 bg-warning p-5 text-light rounded-4">
                             <h3>Process</h3>
                             <ul>
                                 <li>Lập trình tính tổng số tiền quy đổi</li>
-                                <li>Công thức: totalVND = curUSD * valuePerUSD</li>
+                                <li>Công thức: convertResult = inputUSD * valuePerUSD</li>
                             </ul>
                         </div>
                         <div class="col-3 bg-danger p-5 text-light rounded-4">
                             <h3>Output</h3>
                             <ul>
-                                <li>Tổng số tiền quy đổi (totalVND / Number)</li>
+                                <li>Tổng số tiền quy đổi (convertResult / Number)</li>
                             </ul>
                         </div>
                     </div>
@@ -222,13 +227,13 @@
                                 <label for="inputUSD" class="col-4 col-form-label">Số USD</label>
                                 <div class="col-8">
                                     <input type="text" class="form-control" name="inputUSD" id="inputUSD"
-                                        placeholder="Nhập số ngày" />
+                                        placeholder="Nhập số USD" />
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="inputCurUSD" class="col-4 col-form-label">Giá trị quy đổi</label>
+                                <label for="valuePerUSD" class="col-4 col-form-label">Giá trị quy đổi</label>
                                 <div class="col-8">
-                                    <input type="number" class="form-control" name="inputCurUSD" id="inputCurUSD"
+                                    <input type="number" class="form-control" name="valuePerUSD" id="valuePerUSD"
                                         placeholder="Nhập giá trị quy đổi" value="23500" disabled />
                                 </div>
                             </div>
@@ -254,6 +259,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Bài 4 -->
         <section class="vh-100 py-5" id="geometric_calculator">
             <div class="container row align-items-center mx-auto h-100">
                 <div class="content">
@@ -332,6 +339,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Bài 5 -->
         <section class="vh-100 py-5" id="digitsum_calculator">
             <div class="container row align-items-center mx-auto h-100">
                 <div class="content">
@@ -344,7 +353,7 @@
                         <div class="col-3 bg-success p-5 text-light rounded-4">
                             <h3>Input</h3>
                             <ul>
-                                <li>Nhập số có 2 chữ số (inputNumber / Number)</li>
+                                <li>Nhập số có 2 chữ số (inputValue / Number)</li>
                             </ul>
                         </div>
                         <div class="col-3 bg-warning p-5 text-light rounded-4">
@@ -359,7 +368,7 @@
                         <div class="col-3 bg-danger p-5 text-light rounded-4">
                             <h3>Output</h3>
                             <ul>
-                                <li>Kết quả tổng 2 ký số</li>
+                                <li>Kết quả tổng 2 ký số digitsSumResult</li>
                             </ul>
                         </div>
                     </div>
@@ -367,10 +376,10 @@
                         <form>
                             <div class="mb-3 row pt-5">
 
-                                <label for="inputDozenNumber" class="col-4 col-form-label">Kích thước</label>
+                                <label for="inputValue" class="col-4 col-form-label">Kích thước</label>
                                 <div class="col-8">
-                                    <input type="number" min="10" max="99" class="form-control" name="inputDozenNumber"
-                                        id="inputDozenNumber" placeholder="Nhập số" required />
+                                    <input type="number" min="10" max="99" class="form-control" name="inputValue"
+                                        id="inputValue" placeholder="Nhập số" required />
                                 </div>
                             </div>
                             <div class="mb-3 row">

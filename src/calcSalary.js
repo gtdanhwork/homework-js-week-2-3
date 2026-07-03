@@ -1,25 +1,19 @@
 /**
  * Bài tập 1: Tính tiền lương nhân viên
  *? Input:
- *?     Lương 1 ngày là 100,000 (Mặc định / Number)
- *?     Nhập số ngày làm việc (Người dùng nhập / Number)
+ *?     Lương 1 ngày là 100,000 (inputSalary / Mặc định)
+ *?     Nhập số ngày làm việc (inputDays / Number)
  *
  *TODO Process
  *TODO  Lập trình tính tổng số lương nhận được
- *TODO  Công thức: Lương nhận = Lương 1 ngày * Số ngày làm việc
+ *TODO  Công thức: salaryResult = inputSalary * inputDays
  *
  ** Output:
- **     Tổng lương nhận được
+ **     Tổng lương nhận được (salaryResult)
  */
 
-document
-	.getElementById('btnCalcDigitsSum')
-	.addEventListener("click", function () {
-		let val = Number(document.getElementById('inputDozenNumber').value);
+document.getElementById('btnCalcSalary').addEventListener('click', function () {
+	let val = Number(document.getElementById('inputDays').value);
 
-		let valDozens = Math.trunc(val / 10);
-		let valDigit = val % 10;
-
-		document.getElementById('digitsSumResult').innerHTML =
-			valDozens + valDigit;
-	});
+	document.getElementById('salaryResult').innerHTML = val * 100000;
+});

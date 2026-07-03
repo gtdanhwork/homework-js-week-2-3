@@ -12,8 +12,14 @@
  **     Kết quả tổng 2 ký số
  */
 
-document.getElementById('btnCalcDigitsSum').addEventListener('click', function () {
-	let val = document.getElementById('inputDays').value;
+document
+	.getElementById('btnCalcDigitsSum')
+	.addEventListener('click', function () {
+		let val = Number(document.getElementById('inputValue').value);
 
-	document.getElementById('salaryResult').innerHTML = val * 100000;
-});
+		let dozenDigit = Math.trunc(val / 10);
+		let unitDigit = val % 10;
+
+		document.getElementById('digitsSumResult').innerHTML =
+			dozenDigit + unitDigit;
+	});
